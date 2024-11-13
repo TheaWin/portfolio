@@ -20,6 +20,10 @@ import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 import Footer from "@/components/Footer";
 
+import Thumb1 from "@/public/assets/work/thumb1.png";
+import Thumb2 from "@/public/assets/work/thumb2.png";
+import Thumb3 from "@/public/assets/work/thumb3.png";
+
 const projects = [
   {
     num: "01",
@@ -28,7 +32,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia quaerat dolor explicabo eaque quae modi fugit in qui deleniti iure.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+    image: Thumb1,
     live: "",
     github: "",
   },
@@ -39,7 +43,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia quaerat dolor explicabo eaque quae modi fugit in qui deleniti iure.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+    image: Thumb2,
     live: "",
     github: "",
   },
@@ -50,7 +54,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia quaerat dolor explicabo eaque quae modi fugit in qui deleniti iure.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb3.png",
+    image: Thumb3,
     live: "",
     github: "",
   },

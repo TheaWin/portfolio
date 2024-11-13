@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Thea from "@/public/assets/Thea.jpg";
 
 const Photo = () => {
   return (
@@ -22,7 +23,7 @@ const Photo = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/Thea.jpg"
+            src={Thea}
             priority
             quality={100}
             fill
