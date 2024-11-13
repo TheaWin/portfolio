@@ -31,7 +31,7 @@ const Focus = () => {
             <h2 className="text-3xl font-light">ABOUT</h2>
             <div className="space-y-6 text-white/60">
               <p className="leading-relaxed hover:text-accent transition-colors duration-300">
-                I've always been a problem-solver first, long before I
+                I&apos;ve always been a problem-solver first, long before I
                 discovered programming. It all started with building simple
                 websites when I was younger, until the day I wrote my first real
                 application and discovered my true passion.
@@ -40,14 +40,15 @@ const Focus = () => {
                 Creating intuitive and impactful software solutions is at the
                 core of my work. I believe strongly in writing clean,
                 maintainable code that solves real-world problems. Even though
-                it's the technical challenges I'm tackling, I find that the
-                human element is always at the heart of great software.
+                it&apos;s the technical challenges I&apos;m tackling, I find
+                that the human element is always at the heart of great software.
               </p>
               <p className="leading-relaxed hover:text-accent transition-colors duration-300">
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or mentoring aspiring
-                developers. I'm endlessly inspired by the tech community and the
-                endless possibilities of what we can create together.
+                When I&apos;m not coding, you&apos;ll find me exploring new
+                technologies, contributing to open-source projects, or mentoring
+                aspiring developers. I&apos;m endlessly inspired by the tech
+                community and the endless possibilities of what we can create
+                together.
               </p>
             </div>
           </section>
