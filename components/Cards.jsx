@@ -1,45 +1,19 @@
-"use client";
+import grainImage from "@/public/assets/images/grain.jpg";
 
-import { Quote } from "lucide-react";
-import Image from "next/image";
-import { ScrollArea } from "@/components/ui/scroll-area";
-
-const Cards = ({ testimonial }) => {
-  const paragraphs = testimonial.text.split("\n\n");
-
+const Cards = ({ className, children }) => {
   return (
-    <div className="relative bg-[#232329] p-8 rounded-3xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
-      <div className="absolute -top-4 -right-4 bg-accent text-primary p-3 rounded-full">
-        <Quote size={24} />
-      </div>
-
-      <div className="flex items-center gap-4 mb-6">
-        <div className="relative w-16 h-16 flex-shrink-0">
-          <Image
-            src={testimonial.avatar}
-            alt={testimonial.name}
-            fill
-            className="rounded-full object-cover"
-          />
-        </div>
-        <div>
-          <h3 className="font-semibold text-lg">{testimonial.name}</h3>
-          <p className="text-muted-foreground text-sm">
-            {testimonial.position}
-          </p>
-        </div>
-      </div>
-
-      <ScrollArea className="flex-grow pr-4 mb-6 h-[300px]">
-        <div className="text-foreground/90 space-y-4">
-          {paragraphs.map((paragraph, index) => (
-            <p key={index} className="leading-relaxed">
-              {paragraph}
-            </p>
-          ))}
-        </div>
-      </ScrollArea>
+    <div
+      className={`bg-gray-800 rounded-3xl relative overflow-hidden z-0 after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none ${className}`}
+    >
+      <div
+        className="absolute inset-0 opacity-5 -z-10"
+        style={{
+          backgroundImage: `url(${grainImage.src})`,
+        }}
+      ></div>
+      {children}
     </div>
   );
 };
+
 export default Cards;

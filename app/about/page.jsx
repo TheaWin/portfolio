@@ -4,7 +4,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Cards from "@/components/Cards";
+
+import Testimonial from "@/components/Testimonial";
+
 import Footer from "@/components/Footer";
 
 import memojiAvatar1 from "@/public/assets/images/memoji-avatar-1.png";
@@ -12,7 +14,15 @@ import memojiAvatar2 from "@/public/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/public/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/public/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/public/assets/images/memoji-avatar-5.png";
+
 import { Fragment } from "react";
+import StarIcon from "@/public/assets/icons/star.jsx";
+import Profile from "@/public/assets/images/about.jpg";
+import { Camera } from "lucide-react";
+import Cards from "@/components/Cards";
+
+import Insights from "@/components/Insights";
+import Focus from "@/components/Focus";
 
 const testimonials = [
   {
@@ -38,9 +48,11 @@ const testimonials = [
     avatar: memojiAvatar5,
   },
   {
-    name: "Alex Turner",
-    position: "Marketing Manager",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi consequatur commodi officiis ipsam quam voluptatem saepe dicta voluptatibus, quasi unde corporis. Modi reiciendis exercitationem ducimus doloremque iusto cumque nobis minima.",
+    name: "Renish B",
+    position: "Mentor @ CareerFoundry Program",
+    text: `Mentoring Win during the Cloud Computing BootCamp at CareerFoundry was such a pleasure! She picked up new concepts quickly, showed great motivation, and independently handled challenges.
+
+    Her eagerness and genuine enthusiasm made her stand out. I can’t wait to see all the great things she’ll accomplish!`,
     avatar: memojiAvatar3,
   },
 ];
@@ -71,21 +83,83 @@ const About = () => {
 
             <div className="w-full">
               <TabsContent value="focus" className="w-full">
-                focus
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-center">
+                    The Person Behind the Code
+                  </h2>
+                  {/* Testing */}
+                  <Focus />
+                  {/* <div className="container px-4 py-16 mx-auto max-w-6xl xl:h-[350px]">
+                    <div className="grid gap-16 md:grid-cols-[1fr,1.5fr] items-start">
+                      
+                      <div className="space-y-8 animate-fade-in-up">
+                        <div className="relative mx-auto w-[350px] h-[450px] overflow-hidden group">
+                          <Image
+                            src={Profile}
+                            alt="Profile"
+                            fill
+                            className="object-cover transition-all duration-700 ease-out group-hover:scale-105"
+                            priority
+                          />
+                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                          <div className="absolute bottom-6 left-6 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            <Camera className="w-6 h-6 text-white" />
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div className="space-y-12 animate-fade-in-up animation-delay-300">
+                        <section className="space-y-8 animate-fade-in-up animation-delay-500">
+                          <h2 className="text-3xl font-light">ABOUT</h2>
+                          <div className="space-y-6 text-white/60">
+                            <p className="leading-relaxed hover:text-accent transition-colors duration-300">
+                              I've always been a problem-solver first, long
+                              before I discovered programming. It all started
+                              with building simple websites when I was younger,
+                              until the day I wrote my first real application
+                              and discovered my true passion.
+                            </p>
+                            <p className="leading-relaxed hover:text-accent transition-colors duration-300">
+                              Creating intuitive and impactful software
+                              solutions is at the core of my work. I believe
+                              strongly in writing clean, maintainable code that
+                              solves real-world problems. Even though it's the
+                              technical challenges I'm tackling, I find that the
+                              human element is always at the heart of great
+                              software.
+                            </p>
+                            <p className="leading-relaxed hover:text-accent transition-colors duration-300">
+                              When I'm not coding, you'll find me exploring new
+                              technologies, contributing to open-source
+                              projects, or mentoring aspiring developers. I'm
+                              endlessly inspired by the tech community and the
+                              endless possibilities of what we can create
+                              together.
+                            </p>
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  </div> */}
+                </div>
               </TabsContent>
               <TabsContent value="insights" className="w-full">
-                insights
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-center">
+                    Beyond the Résumé
+                  </h2>
+                  <Insights />
+                </div>
               </TabsContent>
               <TabsContent value="testimonials" className="w-full">
                 <div className="mx-auto px-4">
-                  <div className="text-center mb-12 sm:mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center">
-                      What Others Say
-                    </h2>
-                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+                    What Others Say
+                  </h2>
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
                     {testimonials.map((testimonial, index) => (
-                      <Cards key={index} testimonial={testimonial} />
+                      <Testimonial key={index} testimonial={testimonial} />
                     ))}
                   </div>
                 </div>
