@@ -34,8 +34,8 @@ const Focus = () => {
                 My journey into{" "}
                 <span className="text-accent">web development</span> began in
                 high school, where I was first introduced to programming.
-                Although I didn't fully realize it at the time, that spark grew
-                into a passion as I explored coding during a{" "}
+                Although I didn&apos;t fully realize it at the time, that spark
+                grew into a passion as I explored coding during a{" "}
                 <span className="text-accent">career shift</span> last year.
               </p>
               <p className="leading-relaxed hover:text-accent transition-colors duration-300">
