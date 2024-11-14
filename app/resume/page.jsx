@@ -10,6 +10,7 @@ import {
   FaPython,
   FaBootstrap,
   FaGithub,
+  FaGitAlt,
   FaAws,
 } from "react-icons/fa";
 import {
@@ -26,56 +27,23 @@ import {
   SiMongodb,
   SiPostgresql,
   SiMysql,
+  SiAndroidstudio,
+  SiAwslambda,
+  SiReactbootstrap,
+  SiExpo,
+  SiFirebase,
+  SiPwa,
+  SiTypescript,
 } from "react-icons/si";
 
 import Footer from "@/components/Footer";
-
-const about = {
-  title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quam expedita autem eligendi consequatur sed, veniam delectus dicta quia.",
-  info: [
-    {
-      fieldName: "Name",
-      fieldValue: "Thea Win",
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+65) 9238 2743",
-    },
-    {
-      fieldName: "Experience",
-      fieldValue: "1+ Year",
-    },
-    {
-      fieldName: "Skype",
-      fieldValue: "winwinkhaing.wk.14",
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "Myanmar",
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "mstheawin@gmail.com",
-    },
-    {
-      fieldName: "Freelance",
-      fieldValue: "Available",
-    },
-    {
-      fieldName: "Languages",
-      fieldValue: "English, Burmese",
-    },
-  ],
-};
 
 // experience data
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quam expedita autem eligendi consequatur sed, veniam delectus dicta quia.",
+    "Here’s a glimpse into my professional journey. Each experience has shaped my skills, strengthened my expertise, and prepared me for future challenges.",
   items: [
     {
       company: "Active Global Respite Care",
@@ -99,7 +67,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quam expedita autem eligendi consequatur sed, veniam delectus dicta quia.",
+    "Explore my educational journey, where degrees and certifications have shaped my skills and equipped me with the knowledge to excel in my career.",
   items: [
     {
       institution: "CareerFoundry",
@@ -127,7 +95,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quam expedita autem eligendi consequatur sed, veniam delectus dicta quia.",
+    "Explore the core skills and technologies I specialize in as a web developer, from front-end design to back-end development.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -142,8 +110,28 @@ const skills = {
       name: "javascript",
     },
     {
+      icon: <FaPython />,
+      name: "python",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "typescript",
+    },
+    {
       icon: <FaReact />,
       name: "react.js",
+    },
+    {
+      icon: <FaAngular />,
+      name: "angular",
+    },
+    {
+      icon: <FaBootstrap />,
+      name: "bootstrap",
+    },
+    {
+      icon: <SiReactbootstrap />,
+      name: "react-bootstrap",
     },
     {
       icon: <SiNextdotjs />,
@@ -158,68 +146,80 @@ const skills = {
       name: "node.js",
     },
     {
-      icon: <FaAngular />,
-      name: "angular",
-    },
-    {
-      icon: <FaPython />,
-      name: "python",
-    },
-    {
-      icon: <FaBootstrap />,
-      name: "bootstrap",
-    },
-    {
-      icon: <FaGithub />,
-      name: "git/github",
-    },
-    {
-      icon: <FaAws />,
-      name: "aws",
-    },
-    {
       icon: <SiExpress />,
       name: "express",
-    },
-    {
-      icon: <SiCucumber />,
-      name: "cucumber",
-    },
-    {
-      icon: <SiHeroku />,
-      name: "heroku",
-    },
-    {
-      icon: <SiJest />,
-      name: "jest",
-    },
-    {
-      icon: <SiMongodb />,
-      name: "mongodb",
-    },
-    {
-      icon: <SiMysql />,
-      name: "mysql",
-    },
-    {
-      icon: <SiNetlify />,
-      name: "netlify",
-    },
-    {
-      icon: <SiPassport />,
-      name: "passport",
     },
     {
       icon: <SiPostgresql />,
       name: "postgresql",
     },
     {
+      icon: <SiMysql />,
+      name: "mysql",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "mongodb",
+    },
+    {
+      icon: <FaGithub />,
+      name: "github",
+    },
+    {
+      icon: <FaGitAlt />,
+      name: "git",
+    },
+    {
+      icon: <SiPassport />,
+      name: "passport",
+    },
+    {
       icon: <SiPostman />,
       name: "postman",
     },
     {
+      icon: <SiJest />,
+      name: "jest",
+    },
+    {
+      icon: <SiCucumber />,
+      name: "cucumber",
+    },
+    {
       icon: <SiPuppeteer />,
       name: "puppeteer",
+    },
+    {
+      icon: <SiHeroku />,
+      name: "heroku",
+    },
+    {
+      icon: <SiNetlify />,
+      name: "netlify",
+    },
+    {
+      icon: <SiAwslambda />,
+      name: "aws lambda",
+    },
+    {
+      icon: <SiFirebase />,
+      name: "google firebase",
+    },
+    {
+      icon: <SiPwa />,
+      name: "pwa",
+    },
+    {
+      icon: <SiExpo />,
+      name: "expo",
+    },
+    {
+      icon: <SiAndroidstudio />,
+      name: "android studio",
+    },
+    {
+      icon: <FaAws />,
+      name: "aws",
     },
   ],
 };
@@ -255,7 +255,6 @@ const Resume = () => {
               <TabsTrigger value="experience">Experience</TabsTrigger>
               <TabsTrigger value="education">Education</TabsTrigger>
               <TabsTrigger value="skills">Skills</TabsTrigger>
-              <TabsTrigger value="about">About me</TabsTrigger>
               <TabsTrigger asChild value="download">
                 <a href="/assets/resume.pdf" download="resume.pdf">
                   <span>Download CV </span>
@@ -355,32 +354,6 @@ const Resume = () => {
                       })}
                     </ul>
                   </ScrollArea>
-                </div>
-              </TabsContent>
-              <TabsContent
-                value="about"
-                className="w-full text-center xl:text-left"
-              >
-                <div className="flex flex-col gap-[30px]">
-                  <h3 className="text-4xl font-bold">{about.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {about.description}
-                  </p>
-                  <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                    {about.info.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="flex items-center justify-center xl:justify-start gap-4"
-                        >
-                          <span className="text-white/60">
-                            {item.fieldName}
-                          </span>
-                          <span className="text-xl">{item.fieldValue}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
                 </div>
               </TabsContent>
               <TabsContent value="download" className="w-full">
