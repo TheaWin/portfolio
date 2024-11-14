@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Thea from "@/public/assets/Thea.jpg";
+import Thea from "@/public/assets/Thea.png";
 
 const Photo = () => {
   return (
@@ -20,7 +20,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] absolute"
         >
           <Image
             src={Thea}
