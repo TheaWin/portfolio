@@ -9,7 +9,6 @@ const Home = () => {
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-36">
-          {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Full-Stack Developer</span>
             <h1 className="h1">
@@ -20,16 +19,18 @@ const Home = () => {
               I excel at crafting elegant digital experiences and I am
               proficient in various programming languages and technologies.
             </p>
-            {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
+              <Button variant="outline" size="lg" className="uppercase gap-2">
+                <a
+                  href="/assets/resume.pdf"
+                  download="resume.pdf"
+                  className="flex items-center"
+                >
+                  <span>Download CV </span>
+                  <FiDownload className="text-xl" />
+                </a>
               </Button>
+
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
@@ -38,7 +39,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* photo */}
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>

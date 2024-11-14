@@ -119,7 +119,6 @@ const projects = [
       { name: "Expo (ImagePicker, Location)" },
       { name: "Google Firestore/Firebase" },
       { name: "Gifted Chat" },
-      { name: "Library" },
       { name: "Android Studio" },
     ],
     image: Thumb4,
