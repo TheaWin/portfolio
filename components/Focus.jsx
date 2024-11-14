@@ -30,25 +30,36 @@ const Focus = () => {
           <section className="space-y-8 animate-fade-in-up animation-delay-500">
             <h2 className="text-3xl font-light">ABOUT</h2>
             <div className="space-y-6 text-white/60">
-              <p className="leading-relaxed hover:text-accent transition-colors duration-300">
-                I&apos;ve always been a problem-solver first, long before I
-                discovered programming. It all started with building simple
-                websites when I was younger, until the day I wrote my first real
-                application and discovered my true passion.
+              <p className="leading-relaxed  transition-colors duration-300">
+                My journey into{" "}
+                <span className="text-accent">web development</span> began in
+                high school, where I was first introduced to programming.
+                Although I didn't fully realize it at the time, that spark grew
+                into a passion as I explored coding during a{" "}
+                <span className="text-accent">career shift</span> last year.
               </p>
               <p className="leading-relaxed hover:text-accent transition-colors duration-300">
-                Creating intuitive and impactful software solutions is at the
-                core of my work. I believe strongly in writing clean,
-                maintainable code that solves real-world problems. Even though
-                it&apos;s the technical challenges I&apos;m tackling, I find
-                that the human element is always at the heart of great software.
+                <span className="text-accent">Creating</span> functional
+                applications and seeing my{" "}
+                <span className="text-accent">ideas come to life</span> has been
+                incredibly fulfilling. Despite the challenges and the occasional
+                late nights, the{" "}
+                <span className="text-accent">sense of achievement</span> I feel
+                when a project is complete keeps me motivated and inspired.
               </p>
               <p className="leading-relaxed hover:text-accent transition-colors duration-300">
-                When I&apos;m not coding, you&apos;ll find me exploring new
-                technologies, contributing to open-source projects, or mentoring
-                aspiring developers. I&apos;m endlessly inspired by the tech
-                community and the endless possibilities of what we can create
-                together.
+                Now, as a web developer, I focus on building{" "}
+                <span className="text-accent">
+                  responsive, accessible, and efficient
+                </span>{" "}
+                websites and applications. I&apos;m{" "}
+                <span className="text-accent">
+                  constantly learning and adapting
+                </span>{" "}
+                to new technologies, always pushing myself to stay ahead of the
+                curve. Outside of coding, I enjoy{" "}
+                <span className="text-accent">reading and gaming</span>, which
+                help me stay balanced and fueled with creativity for my work.
               </p>
             </div>
           </section>
