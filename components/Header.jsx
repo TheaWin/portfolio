@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+import logo from "@/public/assets/logo.svg";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -9,8 +11,14 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* logo */}
         <Link href="/">
-          <h1 className="text-4xl font-semibold">
-            Thea Win <span>🐈</span>
+          <h1 className="text-4xl font-semibold flex gap-3">
+            Thea Win
+            <Image
+              src={logo}
+              alt="Thea Win Logo. It is a blueberry"
+              width={30}
+              height={30}
+            />
           </h1>
         </Link>
 
