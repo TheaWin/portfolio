@@ -15,19 +15,35 @@ import {
 } from "@/components/ui/select";
 
 import { motion } from "framer-motion";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Footer from "@/components/Footer";
 
 const info = [
   {
-    icon: <FaPhoneAlt />,
+    icon: <FaWhatsapp />,
     title: "Phone",
-    description: "(+65) 9238 2743",
+    description: (
+      <a
+        href="https://wa.me/6592382743"
+        className="text-accent"
+        target="_blank"
+      >
+        (+65) 9238 2743
+      </a>
+    ),
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "mstheawin@gmail.com",
+    description: (
+      <a
+        href="mailto:mstheawin@gmail.com"
+        className="text-accent"
+        target="_blank"
+      >
+        mstheawin@gmail.com
+      </a>
+    ),
   },
   {
     icon: <FaMapMarkerAlt />,
