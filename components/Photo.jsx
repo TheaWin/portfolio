@@ -27,7 +27,7 @@ const Photo = () => {
             priority
             quality={100}
             fill
-            alt=""
+            alt="AI picture of me"
             className="object-contain"
             sizes="(max-width: 1280px) 298px, 498px"
           />
@@ -42,7 +42,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#00ff99"
+            stroke="#00FFD1"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
