@@ -37,10 +37,18 @@ import {
 } from "react-icons/si";
 
 import Footer from "@/components/Footer";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@radix-ui/react-tooltip";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { motion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
 
-// experience data
 const experience = {
-  icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
     "Here’s a glimpse into my professional journey. Each experience has shaped my skills, strengthened my expertise, and prepared me for future challenges.",
@@ -64,7 +72,6 @@ const experience = {
 };
 
 const education = {
-  icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
     "Explore my educational journey, where degrees and certifications have shaped my skills and equipped me with the knowledge to excel in my career.",
@@ -224,17 +231,6 @@ const skills = {
   ],
 };
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@radix-ui/react-tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { motion } from "framer-motion";
-import { FiDownload } from "react-icons/fi";
-
 const Resume = () => {
   return (
     <>
@@ -267,7 +263,7 @@ const Resume = () => {
               <TabsContent value="experience" className="w-full">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{experience.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-[600px] text-black/60 dark:text-white/60 mx-auto xl:mx-0">
                     {experience.description}
                   </p>
                   <ScrollArea className="h-[400px]">
@@ -276,7 +272,7 @@ const Resume = () => {
                         return (
                           <li
                             key={index}
-                            className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                            className="bg-complementary h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                           >
                             <span className="text-accent">{item.duration}</span>
                             <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -284,7 +280,9 @@ const Resume = () => {
                             </h3>
                             <div className="flex items-center gap-3">
                               <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                              <p className="text-white/60">{item.company}</p>
+                              <p className="text-black/60 dark:text-white/60">
+                                {item.company}
+                              </p>
                             </div>
                           </li>
                         );
@@ -296,7 +294,7 @@ const Resume = () => {
               <TabsContent value="education" className="w-full">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{education.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-[600px] text-black/60 dark:text-white/60 mx-auto xl:mx-0">
                     {education.description}
                   </p>
                   <ScrollArea className="h-[400px]">
@@ -305,7 +303,7 @@ const Resume = () => {
                         return (
                           <li
                             key={index}
-                            className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                            className="bg-complementary h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                           >
                             <span className="text-accent">{item.duration}</span>
                             <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -313,7 +311,7 @@ const Resume = () => {
                             </h3>
                             <div className="flex items-center gap-3">
                               <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                              <p className="text-white/60">
+                              <p className="text-black/60 dark:text-white/60">
                                 {item.institution}
                               </p>
                             </div>
@@ -328,7 +326,7 @@ const Resume = () => {
                 <div className="flex flex-col gap-[30px]">
                   <div className="flex flex-col gap-[30px] text-center xl:text-left">
                     <h3 className="text-4xl font-bold">{skills.title}</h3>
-                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    <p className="max-w-[600px] text-black/60 dark:text-white/60 mx-auto xl:mx-0">
                       {skills.description}
                     </p>
                   </div>
@@ -339,7 +337,7 @@ const Resume = () => {
                           <li key={index}>
                             <TooltipProvider delayDuration={100}>
                               <Tooltip>
-                                <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                <TooltipTrigger className="w-full h-[150px] bg-complementary rounded-xl flex justify-center items-center group">
                                   <div className="text-6xl group-hover:text-accent transition-all duration-300">
                                     {skill.icon}
                                   </div>
@@ -359,7 +357,7 @@ const Resume = () => {
               <TabsContent value="download" className="w-full">
                 <div className="flex flex-col gap-[30px]">
                   <h3 className="text-4xl font-bold">Downloaded</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-[600px] text-black/60 dark:text-white/60 mx-auto xl:mx-0">
                     The file has been downloaded.
                   </p>
                 </div>

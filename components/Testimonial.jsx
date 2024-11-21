@@ -8,8 +8,8 @@ const Testimonial = ({ testimonial }) => {
   const paragraphs = testimonial.text.split("\n\n");
 
   return (
-    <div className="relative bg-[#232329] p-8 rounded-3xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
-      <div className="absolute -top-4 -right-4 bg-accent text-primary p-3 rounded-full">
+    <div className="relative bg-complementary p-8 rounded-3xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+      <div className="absolute -top-4 -right-4 bg-accent text-background p-3 rounded-full">
         <Quote size={24} />
       </div>
 

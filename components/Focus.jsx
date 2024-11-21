@@ -8,7 +8,6 @@ const Focus = () => {
   return (
     <div className="container px-4 py-10 mx-auto max-w-6xl xl:h-[350px]">
       <div className="grid gap-16 md:grid-cols-[1fr,1.5fr] items-start">
-        {/* Profile Section */}
         <div className="space-y-8 animate-fade-in-up">
           <div className="relative mx-auto w-[370px] h-[470px] overflow-hidden group">
             <Image
@@ -25,11 +24,10 @@ const Focus = () => {
           </div>
         </div>
 
-        {/* Content Section */}
         <div className="space-y-12 animate-fade-in-up animation-delay-300">
           <section className="space-y-8 animate-fade-in-up animation-delay-500">
-            <h2 className="text-3xl font-light">ABOUT</h2>
-            <div className="space-y-6 text-white/60">
+            {/* <h2 className="text-3xl font-light">About</h2> */}
+            <div className="space-y-6 text-black/60 dark:text-white/60">
               <p className="leading-relaxed  transition-colors duration-300">
                 My journey into{" "}
                 <span className="text-accent">web development</span> began in
@@ -38,7 +36,7 @@ const Focus = () => {
                 grew into a passion as I explored coding during a{" "}
                 <span className="text-accent">career shift</span> last year.
               </p>
-              <p className="leading-relaxed hover:text-accent transition-colors duration-300">
+              <p className="leading-relaxed transition-colors duration-300">
                 <span className="text-accent">Creating</span> functional
                 applications and seeing my{" "}
                 <span className="text-accent">ideas come to life</span> has been
@@ -47,7 +45,7 @@ const Focus = () => {
                 <span className="text-accent">sense of achievement</span> I feel
                 when a project is complete keeps me motivated and inspired.
               </p>
-              <p className="leading-relaxed hover:text-accent transition-colors duration-300">
+              <p className="leading-relaxed transition-colors duration-300">
                 Now, as a web developer, I focus on building{" "}
                 <span className="text-accent">
                   responsive, accessible, and efficient

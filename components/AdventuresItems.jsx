@@ -10,7 +10,7 @@ const AdventuresItems = ({ items, className, wrapperClassName }) => {
             {items.map((item) => (
               <div
                 key={item.title}
-                className="inline-flex items-center gap-1 py-1 px-3 border border-white/10 rounded-lg bg-[#232329] hover:text-accent"
+                className="inline-flex items-center gap-1 py-1 px-3 border border-black/10 dark:border-white/10 rounded-lg bg-complementary hover:text-accent"
               >
                 <Image
                   src={item.icon}

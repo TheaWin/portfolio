@@ -3,8 +3,21 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Thea from "@/public/assets/Thea.png";
+import { useTheme } from "next-themes";
+import React, { useEffect, useState } from "react";
 
 const Photo = () => {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const circleColor = theme === "dark" ? "#00ffd1" : "#e53935";
+
   return (
     <div className="w-full h-full relative">
       <motion.div
@@ -42,7 +55,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#00FFD1"
+            stroke={circleColor}
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"

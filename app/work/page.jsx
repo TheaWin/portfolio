@@ -60,7 +60,7 @@ const projects = [
       { name: "Tailwind" },
       { name: "Swiper" },
     ],
-    image: Thumb7,
+    image: Thumb2,
     live: "https://portfolio-pink-tau-14.vercel.app/",
     github: "https://github.com/TheaWin/portfolio",
   },
@@ -82,7 +82,7 @@ const projects = [
       { name: "Postman" },
       { name: "JSDoc" },
     ],
-    image: Thumb2,
+    image: Thumb3,
     live: "",
     github: "https://github.com/TheaWin/anime-eiga",
   },
@@ -103,7 +103,7 @@ const projects = [
       { name: "PWAs" },
       { name: "Atatus" },
     ],
-    image: Thumb3,
+    image: Thumb4,
     live: "https://theawin.github.io/meet/",
     github: "https://github.com/TheaWin/meet",
   },
@@ -121,7 +121,7 @@ const projects = [
       { name: "Gifted Chat" },
       { name: "Android Studio" },
     ],
-    image: Thumb4,
+    image: Thumb5,
     live: "",
     github: "https://github.com/TheaWin/realm-chat",
   },
@@ -138,7 +138,7 @@ const projects = [
       { name: "Typedoc" },
       { name: "TypeScript" },
     ],
-    image: Thumb5,
+    image: Thumb6,
     live: "https://theawin.github.io/animeEiga-Angular/welcome",
     github: "https://github.com/TheaWin/animeEiga-Angular",
   },
@@ -154,20 +154,16 @@ const projects = [
       { name: "JavaScript" },
       { name: "external API (Pokemon API)" },
     ],
-    image: Thumb6,
+    image: Thumb7,
     live: "https://theawin.github.io/pokepedia/",
     github: "https://github.com/TheaWin/pokepedia",
   },
 ];
 
-// Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia quaerat dolor explicabo eaque quae modi fugit in qui deleniti iure.
-
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
   const handleSlideChange = (swiper) => {
-    //get current slide index
     const currentIndex = swiper.activeIndex;
-    //update project state based on current slide index
     setProject(projects[currentIndex]);
   };
 
@@ -188,11 +184,11 @@ const Work = () => {
                 <div className="text-8xl leading-none font-extrabold text-transparent custom-outline">
                   {project.num}
                 </div>
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                <h2 className="text-[42px] font-bold leading-none text-text group-hover:text-accent transition-all duration-500 capitalize">
                   {project.name} project
                 </h2>
-                <p className="text-white/60">{project.description}</p>
-                <p className="text-white/60">Technologies used:</p>
+                <p className="text-text/60">{project.description}</p>
+                <p className="text-text/60">Technologies used:</p>
                 <ul className="flex flex-wrap gap-2 ">
                   {project.stack.map((item, index) => {
                     return (
@@ -203,14 +199,14 @@ const Work = () => {
                     );
                   })}
                 </ul>
-                <div className="border border-white/20"></div>
+                <div className="border border-text/20"></div>
                 <div className="flex items-center gap-4">
                   {project.live && (
                     <Link href={project.live} target="_blank">
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                            <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-complementary flex justify-center items-center group">
+                            <BsArrowUpRight className="text-text text-3xl group-hover:text-accent" />
                           </TooltipTrigger>
                           <TooltipContent>
                             <p>Live project</p>
@@ -222,8 +218,8 @@ const Work = () => {
                   <Link href={project.github} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                          <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-complementary flex justify-center items-center group">
+                          <BsGithub className="text-text text-3xl group-hover:text-accent" />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>Github repository</p>
@@ -261,7 +257,7 @@ const Work = () => {
                 })}
                 <WorkSliderBtns
                   containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                  btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                  btnStyles="bg-accent hover:bg-accent-hover text-background text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
                 />
               </Swiper>
             </div>

@@ -3,8 +3,26 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: #fef4f4;
+    --complementary: #fbe3e3;
+    --accent: #e53935;
+    --accent-hover: #e84f4c;
+    --text: #333333;
+    --gradient: #ffd54f;
+  }
+  .dark {
+    --background: #1c1c22;
+    --complementary: #27272c;
+    --accent: #00ffd1;
+    --accent-hover: #1affd6;
+    --text: #fff;
+    --gradient: #38bdf8;
+  }
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    background-color: var(--background);
+    color: var(--text);
+    @apply leading-loose;
   }
   h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -16,7 +34,7 @@
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
   .custom-outline {
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--text);
   }
   .masked-gradient {
     mask-image: linear-gradient(

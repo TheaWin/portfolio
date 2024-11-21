@@ -9,7 +9,9 @@ const CardHeader = ({ title, description, className }) => {
         <StarIcon className="text-accent  size-9" />
         <h3 className="text-3xl xl:text-2xl">{title}</h3>
       </div>
-      <p className="text-sm text-white/60 mt-2 lg:text-base">{description}</p>
+      <p className="text-sm text-black/60 dark:text-white/60 mt-2 lg:text-base">
+        {description}
+      </p>
     </div>
   );
 };

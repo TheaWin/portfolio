@@ -2,14 +2,16 @@
 import { useRef } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Cards from "@/components/Cards";
 import CardHeader from "@/components/CardHeader";
 import AdventuresItems from "@/components/AdventuresItems";
 
-import grainImage from "@/public/assets/images/grain.jpg";
 import memojiMap from "@/public/assets/images/memoji-map.png";
-import bookImage from "@/public/assets/images/book.png";
+import bookDark from "@/public/assets/images/book.png";
+import bookLight from "@/public/assets/images/book-light.png";
 import blackDesert from "@/public/assets/images/bdo.png";
 import elderScroll from "@/public/assets/images/eso.png";
 import finalFantasy from "@/public/assets/images/ff.png";
@@ -65,7 +67,7 @@ const hobbies = [
   },
   {
     title: "Baking",
-    emoji: "🍪",
+    emoji: "🍰",
     left: "5%",
     top: "65%",
   },
@@ -97,6 +99,16 @@ const hobbies = [
 
 const Insights = () => {
   const constraintRef = useRef(null);
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const bookSrc = theme == "dark" ? bookDark : bookLight;
   return (
     <div className="mt-3 flex flex-col gap-6 xl:px-20 ">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-6 xl:grid-cols-3">
@@ -136,13 +148,7 @@ const Insights = () => {
                 repeat={Infinity}
               />
             </div>
-            <div
-              className="absolute inset-0 opacity-10 "
-              style={{
-                backgroundImage: `url(${grainImage.src})`,
-              }}
-            ></div>
-            <Image src={bookImage} alt="Book cover" />
+            <Image src={bookSrc} alt="Book cover" />
           </div>
         </Cards>
         <Cards className="h-[320px] md:col-span-3 xl:h-[250px] xl:col-span-2">
@@ -172,7 +178,7 @@ const Insights = () => {
             {hobbies.map((hobby) => (
               <motion.div
                 key={hobby.title}
-                className="inline-flex absolute items-center gap-2 px-6 bg-gradient-to-r from-accent to-sky-400 rounded-full py-1.5"
+                className="inline-flex absolute items-center gap-2 px-6 bg-gradient-to-r from-gradient to-accent rounded-full py-1.5"
                 style={{
                   left: hobby.left,
                   top: hobby.top,
@@ -193,8 +199,8 @@ const Insights = () => {
             className="h-full w-full object-cover"
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full  after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent to-sky-400 -z-10"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent to-gradient -z-20 animate-ping [animation-duration:2s]"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent to-gradient -z-10"></div>
             <Image src={memojiMap} alt="memoji for map" className="size-20" />
           </div>
         </Cards>

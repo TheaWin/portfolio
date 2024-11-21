@@ -9,6 +9,7 @@ import {
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
+import HeaderLogo from "./HeaderLogo";
 
 const links = [
   {
@@ -44,12 +45,10 @@ const MobileNav = () => {
         <SheetDescription className="hidden">Navigation Bar</SheetDescription>
         <div className="mt-32 mb-40 text-center text-2xl">
           <Link href="/">
-            <h1 className="text-4xl font-semibold">
-              Thea Win<span>🐈</span>
-            </h1>
+            <HeaderLogo className="justify-center" />
           </Link>
         </div>
-        <nav className="flex flex-col justicy-fenter items-center gap-8">
+        <nav className="flex flex-col justify-center items-center gap-8">
           {links.map((link, index) => {
             return (
               <Link

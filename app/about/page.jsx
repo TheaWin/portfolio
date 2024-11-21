@@ -1,28 +1,16 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
-import Image from "next/image";
-
-import Testimonial from "@/components/Testimonial";
 
 import Footer from "@/components/Footer";
+import Focus from "@/components/Focus";
+import Insights from "@/components/Insights";
+import Testimonial from "@/components/Testimonial";
 
 import memojiAvatar1 from "@/public/assets/images/memoji-avatar-1.png";
-import memojiAvatar2 from "@/public/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/public/assets/images/memoji-avatar-3.png";
-import memojiAvatar4 from "@/public/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/public/assets/images/memoji-avatar-5.png";
-
-import { Fragment } from "react";
-import StarIcon from "@/public/assets/icons/star.jsx";
-import Profile from "@/public/assets/images/about.jpg";
-import { Camera } from "lucide-react";
-import Cards from "@/components/Cards";
-
-import Insights from "@/components/Insights";
-import Focus from "@/components/Focus";
 
 const testimonials = [
   {
@@ -69,7 +57,7 @@ const About = () => {
       >
         <div className="container mx-auto min-h-[75vh] ">
           <Tabs defaultValue="focus" className="flex flex-col gap-[40px]">
-            <TabsList className="flex items-center justify-center w-full max-w-[400px] mx-auto bg-[#27272c] gap-1 p-1 rounded-full border-white/15 border">
+            <TabsList className="flex items-center justify-center w-full max-w-[400px] mx-auto bg-complementary gap-1 p-1 rounded-full border-black/15 dark:border-white/15 border">
               <TabsTrigger value="focus" className="rounded-full">
                 Focus
               </TabsTrigger>
