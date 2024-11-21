@@ -252,7 +252,7 @@ const Resume = () => {
               <TabsTrigger value="education">Education</TabsTrigger>
               <TabsTrigger value="skills">Skills</TabsTrigger>
               <TabsTrigger asChild value="download">
-                <a href="/assets/resume.pdf" download="resume.pdf">
+                <a href="/assets/resume.pdf" download="Thea-Win-Resume.pdf">
                   <span>Download CV </span>
                   <FiDownload className="text-xl" />
                 </a>

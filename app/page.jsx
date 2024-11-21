@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FaEnvelope } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Footer from "@/components/Footer";
@@ -28,13 +29,16 @@ const Home = () => {
                   <FaEnvelope />
                 </Button>
               </Link>
-
-              <div className="mb-8 xl:mb-0">
-                <Social
-                  containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-background hover: transition-all duration-500"
-                />
-              </div>
+              <Button variant="outline" size="lg" className="uppercase gap-2">
+                <a
+                  href="/assets/resume.pdf"
+                  download="Thea-Win-Resume.pdf"
+                  className="flex items-center"
+                >
+                  <span>Download CV </span>
+                  <FiDownload className="text-xl" />
+                </a>
+              </Button>
             </div>
           </div>
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
