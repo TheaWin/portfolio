@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FaEnvelope } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
-import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Footer from "@/components/Footer";
 import Link from "next/link";

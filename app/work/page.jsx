@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight, BsGithub, BsFileText } from "react-icons/bs";
 
 import {
   Tooltip,
@@ -46,6 +46,7 @@ const projects = [
     image: Thumb1,
     live: "https://anime-eiga.netlify.app/",
     github: "https://github.com/TheaWin/eiga-client",
+    casestudy: "/assets/casestudy.pdf",
   },
   {
     num: "02",
@@ -63,6 +64,7 @@ const projects = [
     image: Thumb2,
     live: "https://portfolio-pink-tau-14.vercel.app/",
     github: "https://github.com/TheaWin/portfolio",
+    casestudy: "",
   },
   {
     num: "03",
@@ -85,6 +87,7 @@ const projects = [
     image: Thumb3,
     live: "",
     github: "https://github.com/TheaWin/anime-eiga",
+    casestudy: "",
   },
   {
     num: "04",
@@ -106,6 +109,7 @@ const projects = [
     image: Thumb4,
     live: "https://theawin.github.io/meet/",
     github: "https://github.com/TheaWin/meet",
+    casestudy: "",
   },
   {
     num: "05",
@@ -124,6 +128,7 @@ const projects = [
     image: Thumb5,
     live: "",
     github: "https://github.com/TheaWin/realm-chat",
+    casestudy: "",
   },
   {
     num: "06",
@@ -141,6 +146,7 @@ const projects = [
     image: Thumb6,
     live: "https://theawin.github.io/animeEiga-Angular/welcome",
     github: "https://github.com/TheaWin/animeEiga-Angular",
+    casestudy: "",
   },
   {
     num: "07",
@@ -157,6 +163,7 @@ const projects = [
     image: Thumb7,
     live: "https://theawin.github.io/pokepedia/",
     github: "https://github.com/TheaWin/pokepedia",
+    casestudy: "",
   },
 ];
 
@@ -227,6 +234,20 @@ const Work = () => {
                       </Tooltip>
                     </TooltipProvider>
                   </Link>
+                  {project.casestudy && (
+                    <Link href={project.casestudy} target="_blank">
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-complementary flex justify-center items-center group">
+                            <BsFileText className="text-text text-3xl group-hover:text-accent" />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Case Study</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
