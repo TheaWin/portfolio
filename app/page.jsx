@@ -22,12 +22,12 @@ const Home = () => {
               technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="outline" size="lg" className="uppercase gap-2">
-                <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/contact" className="flex items-center gap-2">
+                <Button variant="outline" size="lg" className="uppercase gap-2">
                   Contact Me
                   <FaEnvelope />
-                </Link>
-              </Button>
+                </Button>
+              </Link>
 
               <div className="mb-8 xl:mb-0">
                 <Social
