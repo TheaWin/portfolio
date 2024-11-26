@@ -80,7 +80,6 @@ const projects = [
       { name: "Bcrypt" },
       { name: "JSWebToken" },
       { name: "Passport" },
-      { name: "Express" },
       { name: "Postman" },
       { name: "JSDoc" },
     ],
