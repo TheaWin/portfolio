@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mt-3">
         <div className="border-t border-black/15 dark:border-white/15 py-6 text-sm flex flex-col xl:flex-row items-center xl:justify-between gap-4">
           <div className=" text-black/40 dark:text-white/40 ">
-            &copy; 2024. All rights reserved.
+            &copy; 2025. All rights reserved.
           </div>
           <div className="mb-8 xl:mb-0">
             <Social
