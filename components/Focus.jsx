@@ -6,7 +6,7 @@ import Profile from "@/public/assets/images/about.jpg";
 
 const Focus = () => {
   return (
-    <div className="container px-4 py-10 mx-auto max-w-6xl xl:h-[350px]">
+    <div className="container px-4 pt-10 mx-auto max-w-6xl xl:h-[350px]">
       <div className="grid gap-16 md:grid-cols-[1fr,1.5fr] items-start">
         <div className="space-y-8 animate-fade-in-up">
           <div className="relative mx-auto w-[370px] h-[470px] overflow-hidden group">
