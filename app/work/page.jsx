@@ -27,7 +27,7 @@ import Meet from '@/public/assets/work/meet.png';
 import Chat from '@/public/assets/work/chat.png';
 import EigaAngular from '@/public/assets/work/eiga-angular.png';
 import Pokepedia from '@/public/assets/work/pokepedia.png';
-import MenuHelp from '@/public/assets/work/menu-help.png';
+import MenuHelp from '@/public/assets/work/menuhelp.png';
 
 const projects = [
   {
