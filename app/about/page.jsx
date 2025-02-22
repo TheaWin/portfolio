@@ -55,7 +55,7 @@ const About = () => {
           transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
         }}
       >
-        <div className="container mx-auto min-h-[75vh] ">
+        <div className="container mx-auto min-h-screen">
           <Tabs defaultValue="focus" className="flex flex-col gap-[40px]">
             <TabsList className="flex items-center justify-center w-full max-w-[400px] mx-auto bg-complementary gap-1 p-1 rounded-full border-black/15 dark:border-white/15 border">
               <TabsTrigger value="focus" className="rounded-full">

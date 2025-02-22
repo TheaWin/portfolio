@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const socials = [
+  {icon:<FaXTwitter/>, path: "https://x.com/mstheawin"},
   { icon: <FaGithub />, path: "https://github.com/TheaWin" },
   { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/thea-win/" },
 ];
